@@ -1,0 +1,12 @@
+.text {
+    font-size: 18px;
+    font-weight: normal;
+    margin-left: 10px;
+}
+
+@media (max-width: 768px) {
+    .text {
+        font-size: 15px;
+        margin-left: 5px;
+    }
+}

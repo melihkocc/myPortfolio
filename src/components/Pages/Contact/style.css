@@ -1,0 +1,8 @@
+.contactText {
+    transition: 0.5s ease-in-out;
+    color: black;
+}
+
+.contactCard:hover .contactText {
+    color: white;
+}

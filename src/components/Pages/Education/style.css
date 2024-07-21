@@ -1,0 +1,8 @@
+.educationIcons {
+    transition: 0.5s ease-in-out;
+    opacity: 0.5;
+}
+
+.educationLinks:hover .educationIcons {
+    opacity: 1;
+}
