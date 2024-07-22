@@ -6,6 +6,7 @@ import './style.css'
 /// redux
 import { useSelector, useDispatch } from 'react-redux'
 import { closeHamburger } from '@/redux/hamburgerSlice'
+import { DarkMode } from '../Theme/darkMode'
 
 function HamburgerMenu() {
 
@@ -19,7 +20,7 @@ function HamburgerMenu() {
   }
 
   return (
-    <div className={`absolute hamburger ${value ? "active" : ""} bg-white`}>
+    <div className={`absolute hamburger ${value ? "active" : ""} bg-white dark:bg-slate-950`}>
       <div className='flex flex-col px-10 py-10'>
 
         <div onClick={() => handleClick(`/skills`)} className='w-full flex items-center'>
@@ -43,7 +44,11 @@ function HamburgerMenu() {
         </div>
 
         <div className='w-full flex items-center mt-5 ms-5'>
-          <div className="theme-version-animation">v1.0.0 <span className="theme-dots"></span> v1.0.1</div>
+          <div className="theme-version-animation">v1.1.0 <span className="theme-dots"></span> v1.2.0</div>
+        </div>
+
+        <div className='w-full flex items-center mt-5 ms-5'>
+          <DarkMode/>
         </div>
 
       </div>

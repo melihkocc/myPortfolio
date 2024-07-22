@@ -11,7 +11,7 @@ import HamburgerMenu from './HamburgerMenu'
 function Header() {
   return (
     <>
-      <header className="grid grid-cols-3 border-b-2 py-3 fixed w-screen bg-white z-10">
+      <header className="grid grid-cols-3 border-b-2 py-3 fixed w-screen bg-transparent z-10 dark:bg-slate-950">
         <div className='flex justify-center items-center'>
           <Logo />
         </div>

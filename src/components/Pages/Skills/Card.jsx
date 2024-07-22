@@ -11,7 +11,7 @@ function Card({ name = "", imageUrl = "", url = "" }) {
           <h1 className='text-xl p-5 font-light names'>{name}</h1>
         </div>
         <div
-          className='flex justify-end items-center images'
+          className='flex justify-end items-center images dark:opacity-50'
           style={{
             backgroundImage: `url(${imageUrl})`
           }}

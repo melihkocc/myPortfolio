@@ -43,7 +43,7 @@ function CarouselComponent() {
         navigation={true}
         modules={[Autoplay, Navigation]}
         onAutoplayTimeLeft={onAutoplayTimeLeft}
-        className="mySwiper mt-7 lg:mt-0"
+        className="mySwiper mt-7 lg:mt-0 dark:bg-slate-950"
       >
         <SwiperSlide className='flex flex-col justify-center items-center'>
           <Image src={reactSvg} alt='image' />
@@ -51,13 +51,13 @@ function CarouselComponent() {
         </SwiperSlide>
 
         <SwiperSlide className='flex flex-col justify-center items-center'>
-          <Image src={nextSvg} alt='image' />
-          <span className='text-lg text-black'>Next.js</span>
+          <Image src={nextSvg} alt='image' style={{color:"white"}} />
+          <span className='text-lg text-black dark:text-white'>Next.js</span>
         </SwiperSlide>
 
         <SwiperSlide className='flex flex-col justify-center items-center'>
           <Image src={reactNative} alt='image' />
-          <span className='text-lg text-black'>React Native</span>
+          <span className='text-lg text-black dark:text-cyan-400'>React Native</span>
         </SwiperSlide>
 
         <SwiperSlide className='flex flex-col justify-center items-center'>

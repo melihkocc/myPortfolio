@@ -1,7 +1,6 @@
 "use client"
 import React, { useState } from 'react'
-import { Button } from '@mui/material';
-
+import { Button } from '@/components/ui/button'
 
 function Form() {
     const [name, setName] = useState("");
@@ -48,7 +47,7 @@ function Form() {
                             placeholder="İsim Soyisim"
                             value={name}
                             onChange={(e) => setName(e.target.value)}
-                            className="block w-full rounded-md border-0 py-1.5 pl-5 pr-10 text-gray-900 ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
+                            className="block dark:bg-slate-950 dark:text-white dark:placeholder:text-white w-full rounded-md border-0 py-1.5 pl-5 pr-10 text-gray-900 ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
                         />
                     </div>
                 </div>
@@ -64,7 +63,7 @@ function Form() {
                             placeholder="E-mail"
                             value={email}
                             onChange={(e) => setEmail(e.target.value)}
-                            className="block w-full rounded-md border-0 py-1.5 pl-5 pr-10 text-gray-900 ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
+                            className="block dark:bg-slate-950 dark:text-white dark:placeholder:text-white w-full rounded-md border-0 py-1.5 pl-5 pr-10 text-gray-900 ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
                         />
                     </div>
                 </div>
@@ -80,12 +79,12 @@ function Form() {
                             placeholder="Mesaj"
                             value={message}
                             onChange={(e) => setMessage(e.target.value)}
-                            className="block w-full rounded-md border-0 py-1.5 pl-5 pr-10 text-gray-900 ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
+                            className="block dark:bg-slate-950 dark:text-white dark:placeholder:text-white w-full rounded-md border-0 py-1.5 pl-5 pr-10 text-gray-900 ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
                         />
                     </div>
                 </div>
                 <div className='w-full flex justify-center items-center text-sm mb-2 mt-10'>{status && <span className={`${status === "Mesajınız başarıyla gönderildi!" ? "text-green-400" : "text-black"}`}>{status}</span>}</div>
-                <Button className='w-11/12 lg:w-1/2' type='submit' variant='contained'>Gönder</Button>
+                <Button className='w-11/12 lg:w-1/2' type='submit'>Gönder</Button>
             </form>
         </>
     )
