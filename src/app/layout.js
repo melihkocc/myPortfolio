@@ -17,7 +17,7 @@ export default function RootLayout({ children }) {
         <StoreProvider>
           <ThemeProvider
             attribute="class"
-            defaultTheme="system"
+            defaultTheme="light"
             enableSystem
             disableTransitionOnChange
           >
