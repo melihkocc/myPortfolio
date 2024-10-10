@@ -8,6 +8,10 @@ import { useState, useEffect } from "react";
 import { FiSun } from "react-icons/fi";
 import { FaMoon } from "react-icons/fa6";
 
+///redux
+import {  useDispatch } from 'react-redux'
+import { closeHamburger } from '@/redux/hamburgerSlice'
+
 import {
   DropdownMenu,
   DropdownMenuTrigger,
@@ -16,6 +20,8 @@ import {
 export function DarkMode() {
   const { setTheme } = useTheme()
   const { theme } = useTheme()
+  const dispatch = useDispatch()
+
   const [mounted, setMounted] = useState(false)
 
   useEffect(() => {
@@ -31,7 +37,16 @@ export function DarkMode() {
       <DropdownMenuTrigger asChild>
         <div className="flex justify-center items-center">
           {
-            theme === "dark" ? <FiSun onClick={() => setTheme("light")} className="cursor-pointer" size={20}/> : <FaMoon onClick={() => setTheme("dark")} className="cursor-pointer" size={20}/>
+            theme === "dark" ? 
+            <FiSun onClick={() => {
+              setTheme("light")
+              dispatch(closeHamburger())
+            }} className="cursor-pointer" size={20}/> 
+            : 
+            <FaMoon onClick={() => {
+              setTheme("dark")
+              dispatch(closeHamburger())
+            }} className="cursor-pointer" size={20}/>
           }
         </div>
       </DropdownMenuTrigger>

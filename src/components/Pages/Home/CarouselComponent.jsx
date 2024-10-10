@@ -51,7 +51,7 @@ function CarouselComponent() {
         </SwiperSlide>
 
         <SwiperSlide className='flex flex-col justify-center items-center'>
-          <Image src={nextSvg} alt='image' style={{color:"white"}} />
+          <Image src={nextSvg} className='dark:bg-white rounded-lg py-1' alt='image' style={{color:"white"}} />
           <span className='text-lg text-black dark:text-white'>Next.js</span>
         </SwiperSlide>
 
@@ -76,7 +76,7 @@ function CarouselComponent() {
         </SwiperSlide>
 
         <SwiperSlide className='flex flex-col justify-center items-center'>
-          <Image src={expressSvg} width={100} height={100} alt='image' />
+          <Image src={expressSvg} className='dark:bg-white rounded-lg px-1' width={100} height={100} alt='image' />
           <span className='text-lg'>Express.js</span>
         </SwiperSlide>
 

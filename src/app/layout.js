@@ -4,6 +4,7 @@ import "./globals.css";
 import Header from "@/components/Header";
 import StoreProvider from "@/redux/StoreProvider";
 import { ThemeProvider } from "@/components/theme-provider";
+import { Analytics } from "@vercel/analytics/react"
 
 export const metadata = {
   title: "Melih Koç",
@@ -12,17 +13,18 @@ export const metadata = {
 
 export default function RootLayout({ children }) {
   return (
-    <html lang="en">
+    <html lang="en" suppressHydrationWarning>
       <body className={oswald.className}>
         <StoreProvider>
           <ThemeProvider
             attribute="class"
-            defaultTheme="system"
+            defaultTheme="light"
             enableSystem
             disableTransitionOnChange
           >
             <Header />
             {children}
+            <Analytics />
           </ThemeProvider>
         </StoreProvider>
       </body>

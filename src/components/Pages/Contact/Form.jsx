@@ -10,6 +10,13 @@ function Form() {
 
     const handleSubmit = async (event) => {
         event.preventDefault();
+
+        // Boş alan kontrolü
+        if (!name || !email || !message) {
+            setStatus('Lütfen tüm alanları doldurun.');
+            return;
+        }
+
         setStatus('Gönderiliyor...');
         try {
             const response = await fetch(`/api/send-mail`, {
@@ -31,12 +38,13 @@ function Form() {
             setStatus('Bir hata oluştu, lütfen tekrar deneyin.');
         }
     };
+
     return (
         <>
             <div className='w-full flex justify-center items-center text-2xl mt-20'>Bana Ulaşın</div>
             <form className='w-full flex flex-col justify-center items-center ' onSubmit={handleSubmit}>
                 <div className='w-11/12 lg:w-1/2'>
-                    <label htmlFor="name" className="w-full block text-sm font-medium leading-6 text-gray-900">
+                    <label htmlFor="name" className="w-full block text-sm font-medium leading-6 dark:text-white text-gray-900">
                         İsim Soyisim
                     </label>
                     <div className="relative w-full mt-2 rounded-md shadow-sm">
@@ -52,7 +60,7 @@ function Form() {
                     </div>
                 </div>
                 <div className='w-11/12 lg:w-1/2 mt-5'>
-                    <label htmlFor="email" className="w-full block text-sm font-medium leading-6 text-gray-900">
+                    <label htmlFor="email" className="w-full block text-sm font-medium leading-6 dark:text-white text-gray-900">
                         E-mail
                     </label>
                     <div className="relative w-full mt-2 rounded-md shadow-sm">
@@ -68,7 +76,7 @@ function Form() {
                     </div>
                 </div>
                 <div className='w-11/12 lg:w-1/2 mt-5'>
-                    <label htmlFor="message" className="w-full block text-sm font-medium leading-6 text-gray-900">
+                    <label htmlFor="message" className="w-full block text-sm font-medium leading-6 dark:text-white text-gray-900">
                         Mesaj
                     </label>
                     <div className="relative w-full mt-2 rounded-md shadow-sm">
@@ -83,7 +91,7 @@ function Form() {
                         />
                     </div>
                 </div>
-                <div className='w-full flex justify-center items-center text-sm mb-2 mt-10'>{status && <span className={`${status === "Mesajınız başarıyla gönderildi!" ? "text-green-400" : "text-black"}`}>{status}</span>}</div>
+                <div className='w-full flex justify-center items-center text-sm mb-2 mt-10'>{status && <span className={`${status === "Mesajınız başarıyla gönderildi!" ? "text-green-400 text-lg" : "text-red-500 font-mediım text-lg"}`}>{status}</span>}</div>
                 <Button className='w-11/12 lg:w-1/2' type='submit'>Gönder</Button>
             </form>
         </>

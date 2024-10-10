@@ -11,10 +11,6 @@
 
 }
 
-.links:hover .images {
-    opacity: 1;
-}
-
 .images::before {
     content: "";
     position: absolute;
@@ -25,6 +21,33 @@
     background: linear-gradient(to left, rgba(255, 255, 255, 0.2), rgba(255, 255, 255, 1));
     pointer-events: none;
 }
+
+.darkImages {
+    position: relative;
+    background-size: cover;
+    background-position: center;
+    transition: 0.5s ease-in-out;
+    opacity: 0.6;
+}
+
+.darkImages::before{
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+}
+
+.links:hover .images {
+    opacity: 1;
+}
+
+.links:hover .darkImages {
+    opacity: 1;
+}
+
 
 .names {
     opacity: 0.6;
