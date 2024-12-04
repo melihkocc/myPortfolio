@@ -21,7 +21,7 @@ import expressSvg from '@/public/images/express.svg'
 import htmlSvg from '@/public/images/html.svg'
 import cssSvg from '@/public/images/css.svg'
 import javascriptSvg from '@/public/images/javascript.svg'
-
+import springBoot from '@/public/images/spring-boot.svg'
 
 function CarouselComponent() {
   const progressCircle = useRef(null);
@@ -45,6 +45,11 @@ function CarouselComponent() {
         onAutoplayTimeLeft={onAutoplayTimeLeft}
         className="mySwiper mt-7 lg:mt-0 dark:bg-slate-950"
       >
+        <SwiperSlide className='flex flex-col justify-center items-center'>
+          <Image src={springBoot} alt='image' />
+          <span style={{color:"#72b545"}} className='text-lg'>Spring Boot</span>
+        </SwiperSlide>
+
         <SwiperSlide className='flex flex-col justify-center items-center'>
           <Image src={reactSvg} alt='image' />
           <span style={{color:"#61dafb"}} className='text-lg'>React.js</span>
