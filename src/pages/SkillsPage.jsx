@@ -24,8 +24,10 @@ function SkillsPage() {
       <TitleSkills name="Libraries" />
       <div className='w-11/12 lg:w-8/12 flex flex-col justify-start items-start mb-5 lg:mb-10'>
         <div className='w-full grid grid-cols-1 lg:grid-cols-3'>
+        <Card name={images[12].name} imageUrl={images[12].imageUrl} url={images[12].url} />
+        <Card name={images[11].name} imageUrl={images[11].imageUrl} url={images[11].url} />
+          <Card name={images[10].name} imageUrl={images[10].imageUrl} url={images[10].url} />
           <Card name={images[9].name} imageUrl={images[9].imageUrl} url={images[9].url} />
-          <Card name={images[4].name} imageUrl={images[4].imageUrl} url={images[4].url} />
           <Card name={images[5].name} imageUrl={images[5].imageUrl} url={images[5].url} />
           <Card name={images[6].name} imageUrl={images[6].imageUrl} url={images[6].url} />
           <Card name={images[7].name} imageUrl={images[7].imageUrl} url={images[7].url} />
@@ -39,6 +41,7 @@ function SkillsPage() {
           <Card name={images[1].name} imageUrl={images[1].imageUrl} url={images[1].url} />
           <Card name={images[2].name} imageUrl={images[2].imageUrl} url={images[2].url} />
           <Card name={images[3].name} imageUrl={images[3].imageUrl} url={images[3].url} />
+          <Card name={images[4].name} imageUrl={images[4].imageUrl} url={images[4].url} />
         </div>
       </div>
       
