@@ -16,7 +16,8 @@ function Card({ isLeft = true, schoolType = "", schoolName = "", schoolPlace = "
                 <div className="card-body py-6 px-8">
                     <h2 className="card-title font-normal">{schoolType}</h2>
                     <p className='mt-2'>{schoolName}</p>
-                    <p className='font-light mt-2'>{schoolPlace} · {schoolYear}</p>
+                    <p className='font-light mt-2'>{schoolPlace}</p>
+                    <p className='font-light mt-2'>{schoolYear}</p>
                 </div>
             </div>
             {

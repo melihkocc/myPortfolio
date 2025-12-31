@@ -7,44 +7,26 @@ import TitleSkills from "@/components/Pages/Skills/Title"
 import Card from '@/components/Pages/Skills/Card'
 
 /// utils
-import images from '@/utils/images'
+import skillCategories from '@/utils/images'
 
 function SkillsPage() {
   return (
     <Section>
       <Title name="Beceriler" search={false} />
 
-      <TitleSkills name="Programming Languages" />
-      <div className='w-11/12 lg:w-8/12 flex flex-col justify-start items-start mb-5 lg:mb-10'>
-        <div className='w-full grid grid-cols-1 lg:grid-cols-3 justify-center items-center'>
-          <Card name={images[0].name} imageUrl={images[0].imageUrl} url={images[0].url} />
-        </div>
-      </div>
+      {skillCategories.map((category, index) => (
+        <React.Fragment key={index}>
+          <TitleSkills name={category.title} />
+          <div className='w-11/12 lg:w-8/12 flex flex-col justify-start items-start mb-5 lg:mb-10'>
+            <div className='w-full grid grid-cols-1 lg:grid-cols-3 justify-center items-center'>
+              {category.skills.map((skill, skillIndex) => (
+                <Card key={skillIndex} name={skill.name} imageUrl={skill.imageUrl} url={skill.url} />
+              ))}
+            </div>
+          </div>
+        </React.Fragment>
+      ))}
 
-      <TitleSkills name="Libraries" />
-      <div className='w-11/12 lg:w-8/12 flex flex-col justify-start items-start mb-5 lg:mb-10'>
-        <div className='w-full grid grid-cols-1 lg:grid-cols-3'>
-        <Card name={images[12].name} imageUrl={images[12].imageUrl} url={images[12].url} />
-        <Card name={images[11].name} imageUrl={images[11].imageUrl} url={images[11].url} />
-          <Card name={images[10].name} imageUrl={images[10].imageUrl} url={images[10].url} />
-          <Card name={images[9].name} imageUrl={images[9].imageUrl} url={images[9].url} />
-          <Card name={images[5].name} imageUrl={images[5].imageUrl} url={images[5].url} />
-          <Card name={images[6].name} imageUrl={images[6].imageUrl} url={images[6].url} />
-          <Card name={images[7].name} imageUrl={images[7].imageUrl} url={images[7].url} />
-          <Card name={images[8].name} imageUrl={images[8].imageUrl} url={images[8].url} />
-        </div>
-      </div>
-
-      <TitleSkills name="Markup & Styles" />
-      <div className='w-11/12 lg:w-8/12  flex flex-col justify-start items-start mb-5 lg:mb-10'>
-        <div className='w-full grid grid-cols-1 lg:grid-cols-3'>
-          <Card name={images[1].name} imageUrl={images[1].imageUrl} url={images[1].url} />
-          <Card name={images[2].name} imageUrl={images[2].imageUrl} url={images[2].url} />
-          <Card name={images[3].name} imageUrl={images[3].imageUrl} url={images[3].url} />
-          <Card name={images[4].name} imageUrl={images[4].imageUrl} url={images[4].url} />
-        </div>
-      </div>
-      
     </Section>
   )
 }

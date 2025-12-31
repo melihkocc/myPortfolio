@@ -10,20 +10,26 @@ function EducationPage() {
         <Section>
             <Title name="Eğitim" search={false} />
             <div className='w-11/12 lg:w-8/12 flex flex-col justify-start items-start mb-8 mt-10'>
+
+                {/* 1. SIRA: ÜNİVERSİTE (En Güncel - En Üste) */}
                 <Card
                     isLeft={true}
-                    schoolType="Lise"
-                    schoolName="Çağrıbey Anadolu Lisesi"
-                    schoolPlace="Türkiye - Ankara"
-                    schoolYear="4 yıl"
-                />
-
-                <Card
-                    isLeft={false}
                     schoolType="Yazılım Mühendisliği (İngilizce)"
                     schoolName="Ostim Teknik Üniversitesi"
                     schoolPlace="Türkiye - Ankara"
-                    schoolYear="5 yıl"
+                    // "5 yıl" yerine başlangıç ve (tahmini) bitiş veya "Halen" yazmak daha iyidir
+                    schoolYear="2021 - Halen" 
+                    // Veya mezuniyet kesinse: "2021 - 2025 (Beklenen)"
+                />
+
+                {/* 2. SIRA: LİSE (Geçmiş - Alta) */}
+                <Card
+                    isLeft={false}
+                    schoolType="Lise"
+                    schoolName="Çağrıbey Anadolu Lisesi"
+                    schoolPlace="Türkiye - Ankara"
+                    // Buraya da mezun olduğun aralığı yazmalısın
+                    schoolYear="2017 - 2021" 
                 />
             </div>
         </Section>
