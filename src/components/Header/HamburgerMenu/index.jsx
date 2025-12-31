@@ -44,10 +44,6 @@ function HamburgerMenu() {
         </div>
 
         <div className='w-full flex items-center mt-5 ms-5'>
-          <div className="theme-version-animation">v1.4.0 <span className="theme-dots"></span> v1.5.0</div>
-        </div>
-
-        <div className='w-full flex items-center mt-5 ms-5'>
           <DarkMode/>
         </div>
 
